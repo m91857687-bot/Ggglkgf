@@ -6,6 +6,19 @@
     android:padding="16dp">
 
     <TextView
+        android:id="@+id/tv_coins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="العملات: 0"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#FF9800"
+        android:padding="8dp" />
+
+    <TextView
         android:id="@+id/tv_question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,6 +43,22 @@
         android:paddingRight="32dp"
         android:paddingTop="12dp"
         android:paddingBottom="12dp" />
+
+    <Button
+        android:id="@+id/btn_watch_ad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_next"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="شاهد إعلان لربح عملة"
+        android:textSize="16sp"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#FFFFFF"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" />
 
     <!-- StartApp Banner -->
     <com.startapp.sdk.ads.banner.Banner

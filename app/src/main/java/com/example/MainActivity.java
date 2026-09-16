@@ -27,6 +27,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         // 1. Initialize StartApp SDK
+        StartAppSDK.setTestAdsEnabled(true);
         StartAppSDK.init(this, "208214327", true);
         
         // Disable splash ad if user just wants simple UI
@@ -78,7 +79,10 @@ public class MainActivity extends Activity {
             @Override
             public void onReceiveAd(Ad ad) {}
             @Override
-            public void onFailedToReceiveAd(Ad ad) {}
+            public void onFailedToReceiveAd(Ad ad) {
+                // If it fails to load (e.g. NO FILL), log it or handle it.
+                // It will retry when the user clicks the button again.
+            }
         });
     }
 

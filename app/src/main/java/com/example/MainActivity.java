@@ -26,8 +26,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // 1. Initialize StartApp SDK
-        StartAppSDK.setTestAdsEnabled(true);
+        // 1. Initialize StartApp SDK (Real Ads Mode)
         StartAppSDK.init(this, "208214327", true);
         
         // Disable splash ad if user just wants simple UI
@@ -60,7 +59,9 @@ public class MainActivity extends Activity {
                     rewardedVideo.showAd();
                     loadRewardedVideo();
                 } else {
-                    Toast.makeText(MainActivity.this, "يتم تحميل الإعلان، حاول بعد ثوانٍ...", Toast.LENGTH_SHORT).show();
+                    // Fallback to instantly show a normal interstitial ad if video is not ready yet
+                    StartAppAd.showAd(MainActivity.this);
+                    Toast.makeText(MainActivity.this, "تم عرض إعلان سريع (الفيديو قيد التحميل)", Toast.LENGTH_SHORT).show();
                     loadRewardedVideo();
                 }
             }

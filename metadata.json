@@ -1,6 +1,6 @@
 {
-  "name": "لعبة الغاز",
-  "description": "A puzzle game with ads",
+  "name": "Coin Reward",
+  "description": "Watch ads to earn coins",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
